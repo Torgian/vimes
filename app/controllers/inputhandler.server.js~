@@ -1,0 +1,42 @@
+'use strict';
+
+var ObjectID = require('mongodb').ObjectID,
+    mongoose = require('mongoose'),
+    unitSchema = require('../schemas/unitSchema');
+
+function inputHandler (db) {
+    // Parameters are: model name, schema, collection name
+    var Unit = mongoose.model('Unit', unistSchema, 'units')
+
+  // GET API
+  this.getUnits = function (req, res) {
+     Post.find({}, function (err, docs) {
+      if (err) { 
+        throw err; 
+      }
+      
+      res.send(docs);
+    });
+  };
+  
+  this.addUnit = function(req, res){
+    console.log("posting");
+    req.on('data', function(data) {
+    data = JSON.parse(data);
+    var newPost = new Post(data);
+        
+    newPost.save(function(err) {
+        if (err) throw err;
+        });
+        console.log('saving post');
+    }); 
+             
+    req.on('end', function() {
+       res.writeHead(200);
+       res.end();
+    }); 
+  } 
+  
+}
+
+module.exports = inputHandler;

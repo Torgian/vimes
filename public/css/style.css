@@ -1,0 +1,30 @@
+html,
+body {
+    
+    margin:0px;
+    padding:0px;
+}
+
+
+.header-content {
+	background-color: #FFB200;
+	width: 100%;
+}
+
+.header-content h2 {
+	margin-bottom:20px;
+}
+
+.form-width {
+	max-width:80%;
+	margin:0 auto;
+	margin-top: 4em;
+}
+
+.form-width input:nth-child(n){
+	margin:5px;
+}
+
+.loginButton {
+	width:100%;
+}

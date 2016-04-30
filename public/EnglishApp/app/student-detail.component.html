@@ -1,0 +1,15 @@
+
+		<div *ngIf="teacher">
+			 <h3>{{teacher.name}} details</h3>
+				 <div>
+				 	<label>id: </label>{{teacher.id}}</div>
+			 	<div>
+					 <label>name: </label>
+					 <input [(ngModel)]="teacher.name" placeholder="name">
+					 <label>email: </label>
+					 <input [(ngModel)]="teacher.email" placeholder="email">
+				</div>
+		</div>
+</div>
+  <button (click)="goBack()">Back</button>
+</div>

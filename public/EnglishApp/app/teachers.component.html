@@ -1,0 +1,48 @@
+
+	<h1 class="text-center">{{title}}</h1>
+		<div class="container">
+		
+		<img class="img-responsive"src="../img/schools/SmartBuilding.jpg" />
+	</div>
+
+	<h2 class="text-center">School Name</h2>
+	<div class="container">
+		<h2 class="text-center">Teachers</h2>
+				 <div class="teachers">
+				 	<div class="row" *ngFor="#teacher of teachers" 
+				 		>
+				 		<div class="col-xs-3 col-sm-3 col-md-3"><img class="img-responsive" src={{teacher.image}} /></div><div class="col-xs-3 col-sm-3 col-md-3"><p>{{teacher.name}}</p></div>
+				 		
+				 		<div class="col-xs-3 col-sm-3 col-md-3">
+				 			
+						 		<div class="btn-group">
+										  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										    Action <span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu">
+										    <li [class.selected]="teacher === selectedTeacher" 
+				 		(click)="onSelect(teacher)">Edit Profile</li>
+										    <li>Lesson Plan</li>
+										    <li><a href={{teacher.email}}>Email</a></li>
+										  </ul>
+										
+							</div>
+						</div>
+				 	</div>
+
+				 </div>
+			
+		</div>
+		
+			<div *ngIf="selectedTeacher">
+  <h2>
+    {{selectedTeacher.name | uppercase}} is my teacher
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+		
+	 
+	
+	
+
+	 

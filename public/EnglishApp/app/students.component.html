@@ -1,0 +1,46 @@
+
+	<h1 class="text-center">{{title}}</h1>
+		<div class="container">
+		
+		<img class="img-responsive"src="../img/schools/SmartBuilding.jpg" />
+	</div>
+
+	<h2 class="text-center">School Name</h2>		
+		<div class="container">
+		<h2 class="text-center">Students</h2>
+				 <div class="students">
+				 	<div class="row" *ngFor="#student of students">
+				 		<div class="col-xs-3 col-sm-2 col-md-2"><img class="img-responsive" src={{student.image}} /></div>
+				 		<div class="col-xs-3 col-sm-2 col-md-2"><p>{{student.name}}</p></div>
+				 		<div class="col-xs-3 col-sm-3 col-md-3">
+				 			
+						 		<div class="btn-group">
+										  <img type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="img/oraButton.svg" />
+										    
+										  
+										  <ul class="dropdown-menu">
+										    <li [class.selected]="student === selectedStudent"(click)="onSelect(student)">Edit Profile</li>
+										    <li>Lesson Plan</li>
+										    <li><a href={{student.email}}>Email</a></li>
+										  </ul>
+										
+							</div>
+						</div>
+				 		
+				 		
+
+				 	</div>
+				 </div>
+			
+		</div>
+	<div *ngIf="selectedStudent">
+  <h2>
+    {{selectedStudent.name | uppercase}} is my student
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+	 
+	
+	
+
+	 

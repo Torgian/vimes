@@ -1,0 +1,84 @@
+
+
+	 	.selected {
+	 		background-color: #E3C4DE;
+	 		color: white;
+	 	}
+	 	
+	 	img {
+	 		max-height: 400px;
+	 		margin:0 auto;
+	 }
+	 	
+	 	.students img,
+	 	.teachers img {
+	 		border-radius:50%;
+	 		max-height: 100px;
+	 	}
+	 	.dropdown-menu li {
+	 		padding-left:.5em;
+	 	}
+	 	.teachers p,
+	 	.students p {
+	 		position: relative;
+	 		top:10px;
+	 	}
+	 	
+	 	.row {
+	 		margin-bottom: 15px;
+	 	}
+	 	
+	 	
+
+	 	.teachers,
+	 	.students,
+	 	.school  {
+	 		list-style: none;
+	 		cursor: pointer;
+	 		border-radius: 4px;
+	 		
+	 	}
+
+	 
+	 	.email,
+	 	.teachers .badge,
+	 	.students .badge,
+	 	.school .badge {
+	 		width: inherit;
+	 		cursor: pointer;
+	 		background-color: #2FC907;
+	 		border-radius: 50%;
+	 		color: white;
+	 		margin-left:2em;
+	 	}
+
+	 	.email {
+	 		margin-left: .5em;
+	 		border-radius: 4px;
+	 }
+
+	 	.teachers li.selected:hover,
+	 	.students li.selected:hover,
+	 	.school li.selected:hover {
+	 		background-color: #BBD8DC !important;
+	 		color:white;
+	 	}
+
+	 	.teachers li:hover,
+	 	.students li:hover,
+	 	.school li:hover {
+
+			 	color: #607D8B;
+			    background-color: #CCC;
+			    
+		}
+
+		.btn-group img {
+		 	border:none;
+		 	max-height: 4.5em;
+		}
+	
+
+		
+		
+	

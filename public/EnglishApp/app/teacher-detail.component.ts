@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from 'angular2/core';
-import { RouteParams } from 'angular2/router';
+import {RouteParams} from 'angular2/router';
 
 import {Teacher} from './teacher';
-import { TeacherService } from './teacher.service';
+import {TeacherService} from './teacher.service';
 
 @Component({
 	selector: 'my-teacher-detail',
@@ -13,10 +13,10 @@ export class TeacherDetailComponent implements OnInit {
 	@Input() teacher: Teacher;
 	
 	
-	contructor(
+	constructor(
 		private _teacherService: TeacherService,
 		private _routeParams: RouteParams) {
-		
+
 		}
 
 	ngOnInit() {
@@ -27,4 +27,4 @@ export class TeacherDetailComponent implements OnInit {
 	goBack() {
 	window.history.back();
 	}
-}
+}1

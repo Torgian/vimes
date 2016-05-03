@@ -41,11 +41,7 @@ providers: [
 		name: 'TeacherDetail',
 		component: TeacherDetailComponent
 	},
-	{
-		path: '/detail/:id',
-		name: 'StudentDetail',
-		component: StudentDetailComponent
-	},
+	
 	{
 		path: '/teachers',
 		name: 'Teachers',

@@ -32,7 +32,7 @@ export class TeachersComponent implements OnInit {
 
 	constructor(
 		private _router: Router,
-		private _teacherService: TeacherService) {}
+		private _teacherService: TeacherService) { }
 
 	getTeachers() {
 		this._teacherService.getTeachers().then(teachers => this.teachers = teachers);}

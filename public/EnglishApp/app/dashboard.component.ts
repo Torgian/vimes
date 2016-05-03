@@ -19,14 +19,14 @@ export class DashboardComponent implements OnInit
  		private _router: Router,
  		private _teacherService: TeacherService,
  		private _studentService: StudentService){
- 		
+
  		}
 
  	ngOnInit() {
  		this._teacherService.getTeachers()
- 			.then(teachers => this.teachers = teachers.slice(1,3));
+ 			.then(teachers => this.teachers = teachers.slice(1,2));
  		this._studentService.getStudents()
- 			.then(students => this.students = students.slice(1,3));
+ 			.then(students => this.students = students.slice(1,2));
  	}
 
  	gotoDetail(teacher: Teacher){
